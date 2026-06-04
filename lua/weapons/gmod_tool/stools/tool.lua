@@ -12,10 +12,11 @@ if SERVER then
 else
 
 	TOOL.Category	= "Construction"
-	TOOL.Name		= "Template Tool"
+	TOOL.Name		= "Contraption Resizer"
 
 	TOOL.Information = {
-		--{ name = "left" }
+		{ name = "left" }
+		{ name = "right" }
 	}
 
 	TOOL.ClientConVar = {
@@ -30,13 +31,12 @@ else
 		language.Add( a[1] .. a[2], a[3] )
 	end
 
-	l( "listname", "Template" )
+	l( "listname", TOOL.Name )
 	l( "name", TOOL.Name )
-	l( "desc", "This is a tool's template." )
+	l( "desc", "Easily resize any contraption." )
 	l( "0" )
-	l( "left" )
-	l( "right" )
-	l( "reload" )
+	l( "left", "Resize" )
+	l( "right", "Inverse resize" )
 
 	t, l = nil, nil
 
